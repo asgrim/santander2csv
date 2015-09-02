@@ -59,3 +59,4 @@ foreach ($csvData as $fields) {
 }
 fclose($fh);
 
+unlink($xlsFilename);
