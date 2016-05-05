@@ -37,7 +37,7 @@ public class santander2csv {
                 inputFile = fileChooser.getSelectedFile();
             }
 
-            File outputFile = new File(inputFile.getAbsolutePath().replace(".xls", ".lol.csv"));
+            File outputFile = new File(inputFile.getAbsolutePath().replace(".xls", ".csv"));
 
             FileWriter writer = new FileWriter(outputFile);
             writer.write(toCsvString(parse(inputFile)));
