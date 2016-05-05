@@ -43,6 +43,10 @@ public class santander2csv {
             writer.write(toCsvString(parse(inputFile)));
             writer.close();
 
+            if (!inputFile.delete()) {
+                throw new Exception("Failed to delete input file: ".concat(inputFile.getName()));
+            }
+
             JOptionPane.showMessageDialog(
                     null,
                     "Complete!\n\nThe converted file has been saved as \""
